@@ -5,6 +5,7 @@ const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".cards");
 const extra = document.querySelector(".days-want");
 const forecast = document.querySelector(".days-forecast");
+const weather = document.querySelector(".weather-data");
 
 const API_KEY = "d1845658f92b31c64bd94f06f7188c9c"
 
@@ -65,6 +66,8 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
 
 const getCityCoordinates = () => {
     forecast.style.display = "none";
+    weather.style.display = "flex";
+    weather.style.flexDirection = "column";
     const cityName = cityInput.value.trim();
     if (cityName === "") return;
     const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
@@ -81,6 +84,8 @@ const getCityCoordinates = () => {
 
 const getUserCoordinates = () => {
     forecast.style.display = "none";
+    weather.style.display = "flex";
+    weather.style.flexDirection = "column";
     navigator.geolocation.getCurrentPosition(
         position => {
             const { latitude, longitude } = position.coords; // Get coordinates of user location
