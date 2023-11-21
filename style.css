@@ -16,29 +16,23 @@ body {
     background-image: url('ba2.jpg');
     background-size: cover;
 }
-
 h1 {
-    font-size: 2.4rem;
+    font-size: 1.75rem;
     text-align: center;
-    padding: 5px 0;
+    padding: 18px 0;
     color: #fff;
 }
-
 .container {
-    /* display: flex;*/
     gap: 35px;
     padding: 30px;
 }
-
 .wt-inpt {
     width: 400px;
     margin-left: 35%;
 }
-
 .wt-inpt h3 {
-    margin-left: 100px;
+    margin-left: 25%;
 }
-
 .wt-inpt input {
     height: 46px;
     width: 100%;
@@ -196,22 +190,21 @@ h1 {
     max-width: 70px;
     margin: 5px 0 -12px 0;
 }
-
 @media (max-width: 1400px) {
-    .weather-data .current-weather {
-        padding: 20px;
-    }
-
     .cards {
         flex-wrap: wrap;
-    }
-
-    .cards .card {
-        width: calc(100% / 4 - 15px);
     }
 }
 
 @media (max-width: 1200px) {
+    .wt-inpt {
+        margin-left: 30%;
+    }
+
+    .wt-inpt h3 {
+        margin-left: 0%;
+    }
+
     .cards .card {
         width: calc(100% / 3 - 15px);
     }
@@ -237,21 +230,23 @@ h1 {
         padding: 16px 0;
     }
 
-    .container {
-        flex-wrap: wrap;
-        padding: 15px;
+    .wt-inpt {
+        margin-left: 5%;
+        width: 100%;
     }
 
-    .wt-inpt {
-        margin-left: 20%;
+    .current-weather {
         width: 100%;
+        margin-left: 1%;
+        margin-top: 3%;
+    }
+
+    .days-want {
+        width: 50%;
+        margin-left: 2%;
     }
 
     .wt-inpt h3 {
         margin-left: 0%;
-    }
-
-    .weather-data h2 {
-        font-size: 1.35rem;
     }
 }
